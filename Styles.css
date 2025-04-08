@@ -1,16 +1,18 @@
 body{
     background-color: rgb(238, 233, 226);
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
+    padding: 20px;
     margin: 0;
-
-
+    display: grid;
 }
+
 section{
     margin: 20px;
     padding: 20px;
     background-color: rgba(223, 215, 188, 0.808);
+    align-items: center;
 }
+
 header{
     background-color: rgba(92, 69, 37, 0.541);
     text-align: right;
@@ -48,9 +50,11 @@ main{
     background-color: rgba(223, 215, 188, 0.808);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(102, 99, 99, 0.514);
-    display: grid;
+    display: flex;
     place-items: center;
+    flex-direction: column;
 }
+
 h1, h2,h3{
     color: rgb(202, 78, 99);
     text-align: center;
@@ -61,6 +65,7 @@ h1, h2,h3{
     padding: 20px;
     box-shadow: 0 0 10px rgba(102, 99, 99, 0.514);
     gap: 100px;
+    width: 1200px;
 }
 .about-container img{
     border-radius: 50%;
@@ -78,11 +83,14 @@ h1, h2,h3{
     padding: 20px;
     box-shadow: 0 0 10px rgba(102, 99, 99, 0.514);
     gap: 100px;
+    width: 1200px
 }
 .home-container img{
     box-shadow: 0 0 10px rgba(102, 99, 99, 0.514);
-    object-fit: fill;
     border-radius: 8px;
+    display: block;
+    margin: auto;
+    display: flex;
 }
 
 .home-container img:hover{
@@ -99,7 +107,7 @@ p{
 footer{
     padding: 20px;
     background-color: rgba(223, 215, 188, 0.808);
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(102, 99, 99, 0.514);
     display: flex;
     justify-content: space-between;  
@@ -128,15 +136,8 @@ footer .map{
 .links-container a:hover{
     text-decoration: underline;
     color: rgb(202, 78, 99);
-}
-
-@media (max-width:600px) {
-    header{
-        padding: 10px;
-        font-size: 12px;
-    }   
-}
-
+}   
+    
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -158,3 +159,28 @@ footer .map{
   .hamburger {
     display: flex;
   }
+  
+  @media only screen and (max-width:768px) {
+    .about-container{
+       flex-direction: column;
+       text-align: center;
+       width: 80%;
+      }
+    .home-container{
+        flex-direction: column;
+        width: 80%;
+    }  
+    .body{
+        background-color: rgb(238, 233, 226);
+        width: 70%;
+    }  
+    footer{
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .home-container img{
+        flex-direction: column;
+        width: 100%;
+    }
+    }
+
